@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Weather</title>
+	<meta http-equiv ="Content-type" content ="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- mapbox -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<!-- google font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="control-panel">
+				<div class="controls">
+					<button class='controls__refresh btn'>&#8635;</button>
+					<select class='controls__lang-menu btn'>
+						<option value="en">EN</option>
+						<option value="ru">RU</option>
+					</select>
+					<div id="temperature">
+						<button class='controls__type-f btn' value="F">°F</button>
+						<button class='controls__type-c btn' value="C">°C</button>
+					</div>
+				</div>
+				<form class="search">
+					<input id='city' class='search__input' type="search" placeholder="Enter the city...">
+					<button class='search__button btn' type="submit">SEARCH</button>
+				</form>
+			</div>
+
+			<div class="main">
+				<div class="weather">
+					<p class="weather__location">CITY, COUNTRY</p>
+					<p class="weather__date">Sat 16 January 8:26</p>
+					<div class="temperature">
+						<div class="temperature__value">+00</div>
+						<div class="temperature__block">
+							<img src="./images/icon/Clear.png" alt="#" class="temperature__icon">
+							<ul class="temperature__property">
+								<li>00000 </li>
+								<li>FEELS LIKE: -0°</li>
+								<li>WIND: 0 M/S</li>
+								<li>HUMIDITY: 00%</li>
+							</ul>
+						</div>
+					</div>
+					<div class="forecast-wrap">
+						<div class="forecast">
+							<p class="forecast__day">000000</p>
+							<p class="forecast__temperature">+0</p>
+							<img src="./images/icon/Clear.png" alt="#" class="forecast__icon">
+						</div>
+						<div class="forecast">
+							<p class="forecast__day">000000</p>
+							<p class="forecast__temperature">+0</p>
+							<img src="./images/icon/Clouds.png" alt="#" class="forecast__icon">
+						</div>
+						<div class="forecast">
+							<p class="forecast__day">0000000</p>
+							<p class="forecast__temperature">+0</p>
+							<img src="./images/icon/Rain.png" alt="#" class="forecast__icon">
+						</div>
+					</div>
+				</div>
+				<div class="map">
+					<div id='map' style='width: 390px; height: 300px;'></div>
+					<div class="map__coordinates">
+						<p>Latitude: 36°51'</p>
+						<p>Longitude: -75°59'</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
